@@ -28,7 +28,7 @@ def BMI (height,weight):
 def con_h (a,b):
    
     # converts feet and inches to meters
-    if a >0 and b >0:
+    if a >=0 and b >=0:
         foot = a / 3.281
         inch = b / 39.37
         
@@ -44,7 +44,7 @@ def con_h (a,b):
 def con_w (x, y):
     
     # converts stones and pounds to kilograms
-    if x >0 and y >0:
+    if x >=0 and y >=0:
         stone = x * 6.35
         pound = y / 2.205
         
@@ -99,43 +99,27 @@ def patient_full_classif (feet, inches, stones, pounds):
 
 # QUESTION 1
 
-# setting values for their height and weight
-heightcm = 1.66
-weightkg = 55
-
 # calling the function to calculate BMI based on inputted values and printing it
-print('Your BMI value is', BMI(heightcm,weightkg))
+print('Your BMI value is', BMI(1.66,55))
 
 
 
 # QUESTION 2
 
-# setting values for imperial height
-imperial_feet = 5
-imperial_inches = 11
-
-
 # calling function to convert inputs to metric and printing
-print('Your height in meters is',con_h(imperial_feet,imperial_inches))
+print('Your height in meters is',con_h(5,11))
  
-
-# setting values for imperial weight
-imperial_stones = 10
-imperial_pounds = 10 
  
 
 # calling function to convert inputs to metric and printing
-print('Your weight in kgs is', con_w(imperial_stones, imperial_pounds))    
+print('Your weight in kgs is', con_w(10, 10))    
  
 
 
 # QUESTION 3
 
-# setting for BMI value
-value = 23.5
-
 # calling functions to determine full BMI classification and setting output
-outcome = classif(value)
+outcome = classif(23.5)
 
 # setting output message for this question and the next
 msg = 'Your BMI weight classification is {}'
